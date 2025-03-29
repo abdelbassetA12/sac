@@ -1,0 +1,519 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sora:wght@100..800&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", serif;
+}
+/* ✅ تنسيق الصفحة بالكامل */
+body {
+    
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth; /* تمكين التمرير السلس */
+}
+:root{
+    --paragraf-color: #000000c7;
+    --primary-color: #027F9F;
+    --hover-color: #ffdd44;
+    --box-color: #00cccc8f;
+}
+
+a {
+    
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* ✅ تنسيق النافبار */
+
+ .container {
+    position:  fixed;
+    width: 100%;
+
+}
+.navbar {
+   background: #fff;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    padding: 10px 100px;
+  
+}
+
+
+.navbar a img {
+    width: 50px;
+    
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    
+}
+
+.navbar ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 8px 12px;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+    background: #555;
+    border-radius: 5px;
+    color: white;
+}
+
+
+/* ✅ تنسيق زر تغيير اللغة */
+#lang-toggle {
+    background:  var(--primary-color);
+    border: 1px solid var(--primary-color);
+    color: #fff;
+   
+    padding: 8px 12px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 15px;
+    transition: 0.3s;
+}
+
+#lang-toggle:hover {
+    background: none;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    
+}
+
+/* ✅ تنسيق الأقسام */
+
+.section-hero {
+    display: flex;
+   padding: 100px 50px 0;
+   height: 100vh;
+}
+
+
+.section-hero .discription {
+    padding: 30px;
+    width: 50%;
+    
+}
+
+.section-hero .discription h4 {
+    margin-bottom: 10px;
+    font-size: 22px;
+    color: var(--paragraf-color);
+}
+
+.section-hero .discription span {
+    margin: 0 0 10px;
+    font-size: 60px;
+    color: var(--primary-color);
+
+}
+
+.section-hero .discription p {
+    color: var(--paragraf-color);
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+.section-hero .discription button, .achet-butoon {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 30px;
+    transition: 0.3s;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    cursor: pointer;
+
+}
+
+.section-hero .discription button:hover, .achet-butoon:hover {
+    color: white;
+    background-color: var(--primary-color);
+}
+
+.section-hero .image {
+    width: 50%;
+    background-color: red;
+    border-radius: 30px;
+    overflow: hidden;
+   
+  
+}
+
+.section-hero .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+    
+}
+
+#overlay {
+    backdrop-filter: blur(8px);
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.section-hero .app-form {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    width: 50%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    padding: 20px;
+    
+    z-index: 2;
+
+}
+
+
+.section-hero .app-form .forms {
+    
+    margin: 30px auto;
+    padding: 20px;
+    
+}
+
+.section-hero .app-form .forms h1 {
+    color: #333;
+}
+
+
+
+.section-hero .app-form .forms button {
+    background-color: #007bff;
+    
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.section-hero .app-form .forms button:hover {
+    background-color: #0056b3;
+}
+
+
+
+.section-hero .app-form .forms input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.section-hero .app-form .forms input:focus {
+    outline: 1px solid var(--primary-color);
+}
+
+.about {
+    padding: 50px 0 0;
+}
+
+
+.about h2 {
+    color: var(--primary-color);
+    text-align: center;
+    
+}
+
+.about .about-atim {
+    display: flex;
+    padding: 10px;
+}
+
+.about .about-atim .image {
+    width: 50%;
+  
+}
+
+.about .about-atim .image img{
+    width: 100%;
+}
+
+.about .about-script {
+    width: 50%;
+    padding: 100px 100px;
+}
+
+.about .about-script h4 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.about .about-script p {
+    font-size: 18px;
+    padding: 0 10px 0 0;
+    color: var(--paragraf-color);
+}
+
+.about .about-script .abut {
+    margin-bottom: 30px;
+}
+
+.about .about-script  a {
+    color: white;
+    background-color: var(--primary-color);
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 15px;
+    transition: 0.3s;
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+}
+
+.about .about-script a:hover {
+    background: none;
+    color: #027F9F;
+    border: 1px solid var(--primary-color);
+    
+}
+
+.service {
+    padding: 30px;
+}
+
+.service h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin: 30px 0 20px;
+}
+
+.service .title {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.service .title h4 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    
+}
+
+.service .title p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: var(--paragraf-color);
+}
+
+.service .service-cart {
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    gap: 30px;
+    flex-wrap: wrap;
+
+}
+
+.service .service-cart .cart {
+   
+    padding: 30px;
+    position: relative;
+    width: 26%;
+    min-width: 200px;
+    border-radius: 14px;
+    box-shadow: 2px 4px 6px 7px rgba(0, 0, 0, 0.062);
+
+}
+
+.service .service-cart .cart img {
+    width: 70px;
+    height: 70px;
+}
+
+.service .service-cart .cart h5 {
+    font-size: 25px;
+    margin: 16px 0 12px;
+}
+
+.service .service-cart .cart p {
+    font-size: 17px;
+    color: var(--paragraf-color);
+    
+}
+
+.service .service-cart .cart .etap  {
+    border: 1px solid var(--primary-color);
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    
+}
+
+.service .service-cart .cart .etap span {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+
+.contact {
+    padding: 80px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 0 30px;
+  
+}
+
+.contact h2 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.contact h4 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.contact  a {
+    color: white;
+    background: var(--primary-color);
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 30px;
+    transition: 0.3s;
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+}
+
+.contact a:hover {
+    background: none;
+    color: var(--primary-color);
+    border: 1px solid #027F9F;
+    
+}
+
+
+
+
+.form-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 30px;
+}
+
+
+
+.form-section .imag-form {
+    width: 60%;
+}
+
+.form-section .imag-form img {
+    width: 100%;
+}
+
+
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.footer {
+    border-top: 2px solid var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    padding: 30px 60px;
+}
+
+.footer .list ul {
+    list-style: none;
+   
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    
+}
+
+.footer .list ul li a {
+    color: #000;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s;
+
+}
+
+.footer .list ul li a:hover {
+   color: var(--primary-color);
+
+}
+
+
+
+.footer .sosial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer .sosial h4 {
+    font-size: 18px;
+    color: #000;
+}
+
+.footer .sosial  img {
+    width: 30px;
+}
+
+.sosial ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+footer p{
+    text-align: center;
+}
+

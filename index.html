@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sac banane</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body dir="rtl"> <!-- الاتجاه الافتراضي للعربية -->
+
+    <!-- ✅ قسم النافبار -->
+    <div class="container">
+       
+        <nav class="navbar">
+            <div><a href="#home"><img src="images/sac7.jpg" alt=""></a></div>
+            <ul>
+                <li><a href="#home" data-lang="home">الرئيسية</a></li>
+                <li><a href="#about" data-lang="about"> عن المنتج</a></li>
+                <li><a href="#service" data-lang="service">عن التوصيل</a></li>
+                <li><button id="lang-toggle">EN</button></li> <!-- زر تغيير اللغة -->
+            </ul>
+            
+
+         
+            
+        </nav>
+
+    </div>
+    
+
+    <!-- ✅ قسم الرئيسية -->
+    <section id="home" class="section-hero">
+        <div class="image">
+            <img src="images/sac4.jpg" alt="image">
+        </div>
+ 
+        <div class="discription">
+            <h4>حقيبة خصر جدابة </h4>
+            <span>199درهم</span>
+            <p>
+                حقيبة خصر بجودة عالية ومناسبة لكل المناسبات ستضيف لمسة راقية لمظهرك 
+                
+            </p>
+            <button onclick="showForm()">شراء الاَن</button>
+        </div>
+
+
+        <!-- نموذج الطلب -->
+        <div id="overlay"></div>
+
+        <div id="app-form" class="app-form">
+            
+            <form class="forms" id="orderForm" action="https://formspree.io/f/xdkezewz" method="POST">
+                <div class="form-container">
+                    <label for="name">الاسم الكامل:</label>
+                    <input type="text" id="name" name="name" placeholder="ادخل اسمك" required>
+          
+                    <label for="email">البريد الإلكتروني:</label>
+                    <input type="email" id="email" name="email" placeholder="ادخل بريدك الإلكتروني" required>
+          
+                    <label for="phone">رقم الهاتف:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="ادخل رقم هاتفك" required>
+          
+                    <label for="product">  وصف الطلب:</label>
+                    <input type="text" id="product" name="product" placeholder="هنا استفسارك أو طلبك" required>
+          
+                    <button type="submit">إتمام الطلب</button>
+                    <button onclick="nonOrdr()">إلغاء الطلب</button>
+                    
+                </div>
+                
+              </form>
+    
+        </div>
+        
+    </section>
+
+     <!--  about -->
+     <section class="about" id="about">
+        <h2>مميزات المنتج</h2>
+        <div class="about-atim">
+            <div class="about-script">
+                <h4>يتميز المنتج بالجودة والأناقة</h4>
+                <p>
+                    - جودة عالية: مصنوعة من مواد متينة تدوم طويلًا.
+                </p>
+                <br>
+                <p>
+                    - أصلية 100%: تصميم فاخر ومضمون.
+                </p>
+                <br>
+                <p>
+                    - تصميم عصري: تناسب جميع الأذواق والمناسبات.
+                </p>
+                <br>
+                <p>
+                    - مساحة تخزين مثالية: جيوب متعددة لتنظيم الأغراض بسهولة.
+                </p>
+                <br>
+                <p>
+                    - خفيفة الوزن: لا تسبب إرهاقًا عند ارتدائها لفترات طويلة.
+                </p>
+                <br>
+                <p>
+                    - ألوان جذابة: متوفرة بعدة ألوان تناسب جميع الأذواق.
+                </p>
+                <br>
+                <p class="abut">
+                    - متعددة الاستخدامات: مثالية للرحلات، السفر، الرياضة، والتسوق.
+
+                </p>
+                <a href="https://wa.me/message/ZBDT4VQTIW2MB1">للطلب عبر الواتساب</a>
+            </div>
+            <div class="image">
+                <img src="images/sac1.jpg" alt="">
+            </div>
+            
+
+        </div>
+     </section>
+  
+
+    <!-- ✅ خدماتنا-->
+    <section id="service" class="service">
+        <h2> خدماتنا</h2>
+        <div class="title">
+            <h4>أحصل على طلبيتك في ثلاثة مراحل فقط</h4>
+            <p>لا تقلق بشأن ذلك نحن هنا لنقدم لك أفضل تجربة . إليك مراحل الحصول على طابيتك بأسرع وقت </p>
+
+        </div>
+        <div class="service-cart">
+            <div class="cart">
+                <img src="images/donee.jpg" alt="image">
+                <h5>قم بإتمام الطلب</h5>
+                <p>اختر حقيبتك المفضلة وأرسل طلبك بسهولة عبر واتساب أو الموقع، وسنؤكد طلبك فورًا! </p>
+                <div class="etap"><span>1</span></div>
+
+            </div>
+            <div class="cart">
+                <img src="images/chahn.jpg" alt="image">
+                <h5>شحن طلبيتك</h5>
+                <p>نجهز طلبك بعناية ونرسله عبر أسرع شركات الشحن لتصلك الحقيبة في أسرع وقت ممكن.</p>
+                <div class="etap"><span>2</span></div>
+            </div>
+            <div class="cart">
+                <img src="images/cash-on-dl.jpg" alt="image">
+                <h5>الدفع عند الإستلام</h5>
+                <p>استلم حقيبتك وفحصها بنفسك، ثم ادفع عند التسليم بكل راحة وأمان!</p>
+                <div class="etap"><span>3</span></div>
+            </div>
+            <button class="achet-butoon" onclick="showForm()">شراء الاَن</button>
+            
+            
+        </div>
+    </section>
+
+    
+
+    
+
+    
+    <footer>
+        
+        <div class="footer">
+            <div class="list">
+
+                <ul>
+                    <li><a href="#home" data-lang="home">الرئيسية</a></li>
+                    <li><a href="#about" data-lang="about"> عن المنتج</a></li>
+                    <li><a href="#service" data-lang="service">عن التوصيل</a></li>
+                    
+                </ul>
+    
+            </div>
+            <div class="sosial">
+                <h4>تابعنا على</h4>
+                <ul>
+                    <li>
+                        <a href="https://www.instagram.com/webcrafted06/">
+                            <img src="images/insta icon.jpeg" alt="image">
+                            
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://wa.me/message/ZBDT4VQTIW2MB1">
+                            <img src="images/whatsapp.jpeg" alt="image">
+                            
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/share/12KtfZ3p9hN/">
+                            <img src="images/facbk icon.jpeg" alt="image">
+                            
+                        </a>
+                    </li>
+                </ul>
+    
+            </div>
+        </div>
+        <p>All Rights Reserved © 2024.Created</p>
+    </footer>
+    
+
+        <script src="script.js"></script> <!-- تضمين ملف الجافا سكربت الخاص بتغيير اللغة -->
+    </body>
+    </html>
+    
