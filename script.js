@@ -84,6 +84,9 @@ function nonOrdr() {
     document.getElementById('overlay').style.display = 'none';
 }
 
+function changeImage(element) {
+    document.getElementById('mainImage').src = element.src;
+}
 
 
 
